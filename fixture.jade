@@ -1,0 +1,12 @@
+doctype html
+html
+  body
+    script(type='text/javascript')
+      | alert('piped')
+      |alert('piped-no-space')
+    script(type='lang/python') print 'hello'
+    p
+      | This should be ignored
+    script alert('inline')
+    script.
+      alert('dotted')

@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-jade",
+  "description": "An ESLint plugin for linting inline scripts in Jade files",
+  "version": "0.1.0",
+  "author": "Greg V <greg@unrelenting.technology>",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myfreeweb/eslint-plugin-jade"
+  },
+  "bugs": {
+    "url": "https://github.com/myfreeweb/eslint-plugin-jade/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "lint",
+    "jade"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "dependencies": {
+    "jade-lexer": "0.0.8",
+    "jade-parser": "0.0.8",
+    "jade-walk": "0.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.0.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.1"
+  }
+}
