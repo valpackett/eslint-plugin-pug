@@ -11,11 +11,11 @@ test('lint js in jade', function(t) {
 	})
 	cli.addPlugin('eslint-plugin-jade', plugin)
 	var report = cli.executeOnFiles(['fixture.jade'])
-	var errors = report.results[0].messages.map(function(msg) { return [msg.line, msg.column, msg.source] })
+	var errors = report.results[0].messages.map(function (msg) { return [msg.line, msg.column, msg.source] })
 	t.deepEqual(errors, [
 		[5,  23, "alert('piped')"],
-		[6,  31, "alert('piped-no-space')"],
+		[6,  32, "alert('piped-no-space')"],
 		[10, 27, "alert('inline')"],
-		[12, 22, "alert('dotted')"],
+		[14, 9, "})"],
 	], 'errors have correct source locations')
 })
