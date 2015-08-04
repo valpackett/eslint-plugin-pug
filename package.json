@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-jade",
   "description": "An ESLint plugin for linting inline scripts in Jade files",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
