@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-jade",
   "description": "An ESLint plugin for linting inline scripts in Jade files",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
@@ -23,9 +23,9 @@
     "test": "node test.js | tap-spec"
   },
   "dependencies": {
-    "jade-lexer": "0.0.8",
-    "jade-parser": "0.0.8",
-    "jade-walk": "0.0.2"
+    "jade-lexer": "^0.0.8",
+    "jade-parser": "^0.0.8",
+    "jade-walk-extract-text": "^0.1.0"
   },
   "devDependencies": {
     "eslint": "^1.0.0",

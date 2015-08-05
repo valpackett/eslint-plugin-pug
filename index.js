@@ -2,10 +2,9 @@
 
 var lexer = require('jade-lexer')
 var parser = require('jade-parser')
-var walk = require('jade-walk')
+var walkExtract = require('jade-walk-extract-text')
 
-var lines = []
-var indents = []
+var extractions = []
 
 function isValidScript (node) {
 	return node.type === 'Tag' && node.name === 'script'
@@ -14,37 +13,16 @@ function isValidScript (node) {
 
 var jadeProcessor = {
 	preprocess: function (text, filename) {
-		lines = []
-		indents = []
-		var textLines = text.split('\n')
-		var results = []
-		var inScript = false
-		var curNodes = []
-		walk(parser(lexer(text, filename), filename), function before (node, replace) {
-			if (isValidScript(node)) {
-				inScript = true
-				curNodes = []
-			}
-		}, function after (node, replace) {
-			if (isValidScript(node)) {
-				inScript = false
-				if (curNodes.length < 1) return
-				results.push(curNodes.map(function (node) { return node.val }).join(''))
-				lines.push(curNodes[0].line)
-				indents.push(textLines[curNodes[0].line - 1].indexOf(curNodes[0].val.split('\n')[0]))
-			}
-			if (!inScript) return
-			if (node.type !== 'Text') return
-			curNodes.push(node)
-		}, {includeDependencies: true})
-		return results
+		extractions = walkExtract(parser(lexer(text, filename), filename), text, isValidScript)
+		return extractions.map(function (x) { return x.text })
 	},
 	postprocess: function (messages, filename) {
 		var results = []
 		messages.forEach(function (errors, idx) {
 			errors.forEach(function (error) {
-				error.line += lines[idx] - 1
-				error.column += indents[idx]
+				var extraction = extractions[idx]
+				error.line += extraction.line - 1
+				error.column += extraction.indent
 				results.push(error)
 			})
 		})
