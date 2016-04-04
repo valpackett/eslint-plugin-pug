@@ -1,13 +1,13 @@
-# eslint-plugin-jade [![npm version](https://img.shields.io/npm/v/eslint-plugin-jade.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-jade) [![npm downloads](https://img.shields.io/npm/dm/eslint-plugin-jade.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-jade) [![Build Status](https://img.shields.io/travis/myfreeweb/eslint-plugin-jade.svg?style=flat)](https://travis-ci.org/myfreeweb/eslint-plugin-jade) [![Dependency Status](https://img.shields.io/gemnasium/myfreeweb/eslint-plugin-jade.svg?style=flat)](https://gemnasium.com/myfreeweb/eslint-plugin-jade) [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
+# eslint-plugin-pug [![npm version](https://img.shields.io/npm/v/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug) [![npm downloads](https://img.shields.io/npm/dm/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug) [![Build Status](https://img.shields.io/travis/myfreeweb/eslint-plugin-pug.svg?style=flat)](https://travis-ci.org/myfreeweb/eslint-plugin-pug) [![Dependency Status](https://img.shields.io/gemnasium/myfreeweb/eslint-plugin-pug.svg?style=flat)](https://gemnasium.com/myfreeweb/eslint-plugin-pug) [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
 
-An [ESLint] plugin for linting inline scripts in [Jade] files!
+An [ESLint] plugin for linting inline scripts in [Pug] files (formerly Jade)!
 
 Only extracts `script` tags with no type or `text/javascript` type.
 
 See also: [eslint-plugin-html].
 
 [ESLint]: http://eslint.org
-[Jade]: http://jade-lang.com
+[Pug]: http://pug-lang.com
 [eslint-plugin-html]: https://github.com/BenoitZugmeyer/eslint-plugin-html
 
 ## Installation
@@ -15,7 +15,7 @@ See also: [eslint-plugin-html].
 Install with [npm], obviously:
 
 ```bash
-npm install --save-dev eslint eslint-plugin-jade
+npm install --save-dev eslint eslint-plugin-pug
 ```
 
 And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `package.json`:
@@ -23,7 +23,7 @@ And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `pack
 ```json
 {
   "plugins": [
-    "jade"
+    "pug"
   ]
 }
 ```
@@ -34,9 +34,8 @@ And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `pack
 ## Contributing
 
 Please feel free to submit pull requests!
-Bugfixes and simple non-breaking improvements will be accepted without any questions :-)
 
-By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/2/0/).
+By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/).
 
 ## License
 

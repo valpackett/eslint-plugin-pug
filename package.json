@@ -1,21 +1,22 @@
 {
-  "name": "eslint-plugin-jade",
-  "description": "An ESLint plugin for linting inline scripts in Jade files",
-  "version": "0.1.2",
+  "name": "eslint-plugin-pug",
+  "description": "An ESLint plugin for linting inline scripts in Pug files",
+  "version": "1.0.0",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myfreeweb/eslint-plugin-jade"
+    "url": "https://github.com/myfreeweb/eslint-plugin-pug"
   },
   "bugs": {
-    "url": "https://github.com/myfreeweb/eslint-plugin-jade/issues"
+    "url": "https://github.com/myfreeweb/eslint-plugin-pug/issues"
   },
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin",
     "lint",
+    "pug",
     "jade"
   ],
   "main": "index.js",
@@ -23,13 +24,13 @@
     "test": "node test.js | tap-spec"
   },
   "dependencies": {
-    "jade-lexer": "^0.0.8",
-    "jade-parser": "^0.0.8",
-    "jade-walk-extract-text": "^0.1.0"
+    "pug-lexer": "^1.0.0",
+    "pug-parser": "^1.0.0",
+    "pug-walk-extract-text": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.0.0",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.1"
+    "eslint": "^2.6.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
   }
 }

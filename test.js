@@ -2,15 +2,15 @@ var test = require('tape')
 var plugin = require('./')
 var CLIEngine = require('eslint').CLIEngine
 
-test('lint js in jade', function(t) {
+test('lint js in pug', function(t) {
 	t.plan(1)
 	var cli = new CLIEngine({
 		envs: ["browser"],
 		useEslintrc: false,
 		rules: { semi: 2 }
 	})
-	cli.addPlugin('eslint-plugin-jade', plugin)
-	var report = cli.executeOnFiles(['fixture.jade'])
+	cli.addPlugin('eslint-plugin-pug', plugin)
+	var report = cli.executeOnFiles(['fixture.pug'])
 	var errors = report.results[0].messages.map(function (msg) { return [msg.line, msg.column, msg.source] })
 	t.deepEqual(errors, [
 		[5,  23, "alert('piped')"],

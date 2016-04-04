@@ -1,8 +1,8 @@
 'use strict'
 
-var lexer = require('jade-lexer')
-var parser = require('jade-parser')
-var walkExtract = require('jade-walk-extract-text')
+var lexer = require('pug-lexer')
+var parser = require('pug-parser')
+var walkExtract = require('pug-walk-extract-text')
 
 var extractions = []
 
@@ -11,7 +11,7 @@ function isValidScript (node) {
 		&& node.attrs.filter(function (attr) { return attr.val.replace(/['"]/g, '') !== 'text/javascript' }).length <= 0
 }
 
-var jadeProcessor = {
+var pugProcessor = {
 	preprocess: function (text, filename) {
 		extractions = walkExtract(parser(lexer(text, filename), filename), text, isValidScript)
 		return extractions.map(function (x) { return x.text })
@@ -32,6 +32,7 @@ var jadeProcessor = {
 
 module.exports = {
 	processors: {
-		'.jade': jadeProcessor
+		'.jade': pugProcessor,
+		'.pug': pugProcessor
 	}
 }
