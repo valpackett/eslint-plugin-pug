@@ -7,7 +7,7 @@ Only extracts `script` tags with no type or `text/javascript` type.
 See also: [eslint-plugin-html].
 
 [ESLint]: http://eslint.org
-[Pug]: http://pug-lang.com
+[Pug]: https://pugjs.org
 [eslint-plugin-html]: https://github.com/BenoitZugmeyer/eslint-plugin-html
 
 ## Installation
