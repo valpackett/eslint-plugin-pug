@@ -13,7 +13,7 @@ function isValidScript (node) {
 
 var pugProcessor = {
 	preprocess: function (text, filename) {
-		extractions = walkExtract(parser(lexer(text, filename), filename), text, isValidScript)
+		extractions = walkExtract(parser(lexer(text, {filename: filename}), {filename: filename}), text, isValidScript)
 		return extractions.map(function (x) { return x.text })
 	},
 	postprocess: function (messages, filename) {
