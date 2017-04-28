@@ -35,7 +35,9 @@ And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `pack
 
 Please feel free to submit pull requests!
 
-By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/).
+By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/) and to release your contributions under the Unlicense.
+
+[The list of contributors is available on GitHub](https://github.com/myfreeweb/eslint-plugin-pug/graphs/contributors).
 
 ## License
 
