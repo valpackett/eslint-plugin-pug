@@ -23,6 +23,12 @@ var pugProcessor = {
 				var extraction = extractions[idx]
 				error.line += extraction.line - 1
 				error.column += extraction.indent
+				if ('endLine' in error) {
+					error.endLine += extraction.line - 1
+				}
+				if ('endColumn' in error) {
+					error.endColumn += extraction.indent
+				}
 				results.push(error)
 			})
 		})
