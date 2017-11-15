@@ -1,17 +1,17 @@
-var test = require('tape')
-var plugin = require('./')
-var CLIEngine = require('eslint').CLIEngine
+const test = require('tape')
+const plugin = require('./')
+const CLIEngine = require('eslint').CLIEngine
 
-test('lint js in pug', function(t) {
+test('lint js in pug', t => {
 	t.plan(1)
-	var cli = new CLIEngine({
+	const cli = new CLIEngine({
 		envs: ["browser"],
 		useEslintrc: false,
 		rules: { semi: 2 }
 	})
 	cli.addPlugin('eslint-plugin-pug', plugin)
-	var report = cli.executeOnFiles(['fixture.pug'])
-	var errors = report.results[0].messages.map(function (msg) { return [msg.line, msg.column, msg.source] })
+	const report = cli.executeOnFiles(['fixture.pug'])
+	const errors = report.results[0].messages.map(msg => [msg.line, msg.column, msg.source])
 	t.deepEqual(errors, [
 		[5,  23, "alert('piped')"],
 		[6,  32, "alert('piped-no-space')"],
