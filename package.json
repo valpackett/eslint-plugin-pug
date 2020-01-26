@@ -21,16 +21,23 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "node test.js | tap-spec"
+    "test": "jest"
   },
   "dependencies": {
-    "pug-lexer": "^3.1.0",
-    "pug-parser": "^4.0.0",
-    "pug-walk-extract-text": "^1.1.0"
+    "lodash": "^4.17.15",
+    "pug-lexer": "^4.1.0",
+    "pug-parser": "^5.0.1",
+    "pug-walk": "^1.1.8",
+    "vfile": "^4.0.2",
+    "vfile-location": "^2.0.6"
   },
   "devDependencies": {
-    "eslint": "^4.11.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.8.0"
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0"
   }
 }

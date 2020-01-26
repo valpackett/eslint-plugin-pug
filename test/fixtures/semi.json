@@ -1,0 +1,81 @@
+[
+  {
+    "ruleId": "semi",
+    "severity": 2,
+    "message": "Missing semicolon.",
+    "line": 5,
+    "column": 23,
+    "nodeType": "ExpressionStatement",
+    "endLine": 6,
+    "endColumn": 1,
+    "fix": {
+      "range": [
+        82,
+        82
+      ],
+      "text": ";"
+    }
+  },
+  {
+    "ruleId": "semi",
+    "severity": 2,
+    "message": "Missing semicolon.",
+    "line": 6,
+    "column": 31,
+    "nodeType": "ExpressionStatement",
+    "fix": {
+      "range": [
+        113,
+        113
+      ],
+      "text": ";"
+    }
+  },
+  {
+    "ruleId": "semi",
+    "severity": 2,
+    "message": "Missing semicolon.",
+    "line": 10,
+    "column": 27,
+    "nodeType": "ExpressionStatement",
+    "fix": {
+      "range": [
+        222,
+        222
+      ],
+      "text": ";"
+    }
+  },
+  {
+    "ruleId": "semi",
+    "severity": 2,
+    "message": "Missing semicolon.",
+    "line": 14,
+    "column": 9,
+    "nodeType": "ExpressionStatement",
+    "endLine": 15,
+    "endColumn": 1,
+    "fix": {
+      "range": [
+        282,
+        282
+      ],
+      "text": ";"
+    }
+  },
+  {
+    "ruleId": "semi",
+    "severity": 2,
+    "message": "Missing semicolon.",
+    "line": 18,
+    "column": 9,
+    "nodeType": "ExpressionStatement",
+    "fix": {
+      "range": [
+        331,
+        331
+      ],
+      "text": ";"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "ruleId": "no-constant-condition",
+      "severity": 2,
+      "message": "Unexpected constant condition.",
+      "line": 2,
+      "column": 7,
+      "nodeType": "Literal",
+      "messageId": "unexpected",
+      "endLine": 2,
+      "endColumn": 11
+    },
+    {
+      "ruleId": "no-constant-condition",
+      "severity": 2,
+      "message": "Unexpected constant condition.",
+      "line": 4,
+      "column": 7,
+      "nodeType": "Literal",
+      "messageId": "unexpected",
+      "endLine": 4,
+      "endColumn": 11
+    }
+  ],
+  "errorCount": 2,
+  "warningCount": 0,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "output": "script.\n  if (true) { console.log('yes') }\nscript.\n  if (true) {\n    console.log('curly')\n  }"
+}
