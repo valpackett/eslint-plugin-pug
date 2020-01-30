@@ -1,0 +1,12 @@
+# copy from .gitignore (except node_modules/)
+yarn.lock
+shrinkwrap.json
+package-lock.json
+
+# extra ignore file for npm
+test/
+.eslintrc.js
+.gitattributes
+.travis.yml
+CODE_OF_CONDUCT.md
+jest.config.js
