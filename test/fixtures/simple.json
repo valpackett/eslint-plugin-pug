@@ -1,0 +1,57 @@
+[
+  {
+    "column": 9,
+    "endColumn": 20,
+    "endLine": 8,
+    "line": 8,
+    "message": "Unexpected console statement.",
+    "messageId": "unexpected",
+    "nodeType": "MemberExpression",
+    "ruleId": "no-console",
+    "severity": 2
+  },
+  {
+    "column": 9,
+    "endColumn": 20,
+    "endLine": 11,
+    "line": 11,
+    "message": "Unexpected console statement.",
+    "messageId": "unexpected",
+    "nodeType": "MemberExpression",
+    "ruleId": "no-console",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 18,
+    "endLine": 15,
+    "line": 15,
+    "message": "Unexpected console statement.",
+    "messageId": "unexpected",
+    "nodeType": "MemberExpression",
+    "ruleId": "no-console",
+    "severity": 2
+  },
+  {
+    "column": 15,
+    "endColumn": 26,
+    "endLine": 18,
+    "line": 18,
+    "message": "Unexpected console statement.",
+    "messageId": "unexpected",
+    "nodeType": "MemberExpression",
+    "ruleId": "no-console",
+    "severity": 2
+  },
+  {
+    "column": 12,
+    "endColumn": 23,
+    "endLine": 19,
+    "line": 19,
+    "message": "Unexpected console statement.",
+    "messageId": "unexpected",
+    "nodeType": "MemberExpression",
+    "ruleId": "no-console",
+    "severity": 2
+  }
+]

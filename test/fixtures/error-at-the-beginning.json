@@ -1,0 +1,20 @@
+[
+  {
+    "ruleId": "max-len",
+    "severity": 2,
+    "message": "This line has a length of 70. Maximum allowed is 35.",
+    "line": 2,
+    "column": 3,
+    "nodeType": "Program",
+    "messageId": "max"
+  },
+  {
+    "ruleId": "max-lines",
+    "severity": 2,
+    "message": "File has too many lines (6). Maximum allowed is 1.",
+    "line": 2,
+    "column": 3,
+    "nodeType": null,
+    "messageId": "exceed"
+  }
+]

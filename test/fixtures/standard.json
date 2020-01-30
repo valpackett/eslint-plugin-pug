@@ -1,0 +1,46 @@
+[
+  {
+    "column": 3,
+    "endColumn": 14,
+    "endLine": 2,
+    "fix": {
+      "range": [
+        12,
+        12
+      ],
+      "text": " "
+    },
+    "line": 2,
+    "message": "Expected space or tab after '//' in comment.",
+    "nodeType": "Line",
+    "ruleId": "spaced-comment",
+    "severity": 2
+  },
+  {
+    "column": 3,
+    "endColumn": 19,
+    "endLine": 3,
+    "fix": {
+      "range": [
+        35,
+        36
+      ],
+      "text": "; var"
+    },
+    "line": 3,
+    "message": "Split initialized 'var' declarations into multiple statements.",
+    "nodeType": "VariableDeclaration",
+    "ruleId": "one-var",
+    "severity": 2
+  },
+  {
+    "column": 16,
+    "endColumn": 19,
+    "endLine": 3,
+    "line": 3,
+    "message": "'baz' is defined but never used.",
+    "nodeType": "Identifier",
+    "ruleId": "no-unused-vars",
+    "severity": 2
+  }
+]

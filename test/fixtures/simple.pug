@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width")
+    title Test
+    script
+      | console.log(1);
+  body
+    script(type="text/javascript")
+      | console.log(1);
+    | blahblah
+    script.
+             a;
+      console.log(1);
+    script.
+      a;
+              console.log(1);
+    script console.log(1);

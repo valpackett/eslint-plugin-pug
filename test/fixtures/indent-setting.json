@@ -1,0 +1,110 @@
+[
+  {
+    "column": 7,
+    "endColumn": 9,
+    "endLine": 14,
+    "fix": {
+      "range": [
+        173,
+        175
+      ],
+      "text": ""
+    },
+    "line": 14,
+    "message": "Expected indentation of 0 spaces but found 2.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Keyword",
+    "ruleId": "indent",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 11,
+    "endLine": 15,
+    "fix": {
+      "range": [
+        190,
+        194
+      ],
+      "text": "  "
+    },
+    "line": 15,
+    "message": "Expected indentation of 2 spaces but found 4.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Identifier",
+    "ruleId": "indent",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 9,
+    "endLine": 16,
+    "fix": {
+      "range": [
+        205,
+        207
+      ],
+      "text": ""
+    },
+    "line": 16,
+    "message": "Expected indentation of 0 spaces but found 2.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Punctuator",
+    "ruleId": "indent",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 11,
+    "endLine": 19,
+    "fix": {
+      "range": [
+        244,
+        248
+      ],
+      "text": ""
+    },
+    "line": 19,
+    "message": "Expected indentation of 0 spaces but found 4.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Keyword",
+    "ruleId": "indent",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 13,
+    "endLine": 20,
+    "fix": {
+      "range": [
+        263,
+        269
+      ],
+      "text": "  "
+    },
+    "line": 20,
+    "message": "Expected indentation of 2 spaces but found 6.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Identifier",
+    "ruleId": "indent",
+    "severity": 2
+  },
+  {
+    "column": 7,
+    "endColumn": 11,
+    "endLine": 21,
+    "fix": {
+      "range": [
+        280,
+        284
+      ],
+      "text": ""
+    },
+    "line": 21,
+    "message": "Expected indentation of 0 spaces but found 4.",
+    "messageId": "wrongIndentation",
+    "nodeType": "Punctuator",
+    "ruleId": "indent",
+    "severity": 2
+  }
+]
