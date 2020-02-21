@@ -48,6 +48,7 @@ test.each([
 
 test.each([
   ['semi', 'semi-fix', { rules: { semi: ['error', 'always'] } }],
+  ['string-interpolation', 'string-interpolation', { rules: { semi: ['error', 'always'] } }],
   ['multiline', 'multiline', {
     extends: 'standard',
     rules: {

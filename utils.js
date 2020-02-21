@@ -48,19 +48,37 @@ exports.parsePug = str => {
   return pugParser(pugLexer(str))
 }
 
+exports.nodesToOrigsAndText = (ctx, nodes) => {
+  const origs = []
+  const lines = []
+  let lastLine = null
+  _.each(nodes, (node, i) => {
+    if (node.val === '\n') return
+    if (node.line === lastLine) return
+    lastLine = node.line
+    origs.push([node.line, node.column - 1])
+    const indexStart = exports.positionToOffset(ctx.vfileLoc, node)
+    const indexEnd = exports.positionToOffset(ctx.vfileLoc, { line: node.line + 1, column: 1 })
+    lines.push(ctx.src.substring(indexStart, indexEnd === -1 ? undefined : indexEnd - 1))
+  })
+  return {
+    origs,
+    text: lines.join('\n')
+  }
+}
+
 exports.preprocess = (src, filename) => {
   const ast = exports.parsePug(src)
   ctx = { src, filename, vfileLoc: vfileLocation(vfile(src)), blocks: [] }
   pugWalk(ast, node => {
     if (!exports.isJsNode(node)) return
-    const lines = _.filter(node.block.nodes, n => n.val !== '\n')
-    const text = _.map(lines, 'val').join('\n')
+    const { origs, text } = exports.nodesToOrigsAndText(ctx, node.block.nodes)
     ctx.blocks.push({
       column: node.column,
       filename: '0.js',
-      fixMultiline: node.line !== _.get(node, 'block.nodes.0.line'),
+      fixMultiline: node.line !== _.first(origs)[0],
       line: node.line,
-      origs: _.map(lines, n => [n.line, n.column - 1]),
+      origs,
       text,
       vfileLoc: vfileLocation(vfile(text)),
     })

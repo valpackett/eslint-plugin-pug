@@ -2,3 +2,4 @@ node_modules/
 yarn.lock
 shrinkwrap.json
 package-lock.json
+.node_repl_history

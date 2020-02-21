@@ -1,0 +1,8 @@
+{
+  "errorCount": 0,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": [],
+  "output": "script.\n  var a = {\n    liffId: '#{LIFF_TALL}'\n  };\n  var b = {\n    liffId: '#{LIFF_TALL}'\n  };\nscript.\n  var a = {\n    liffId: '#{LIFF_TALL}'\n  };",
+  "warningCount": 0
+}
