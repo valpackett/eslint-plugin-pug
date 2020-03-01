@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-pug",
   "description": "An ESLint plugin for linting inline scripts in Pug files",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
