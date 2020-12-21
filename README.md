@@ -1,6 +1,6 @@
 [![npm version](https://img.shields.io/npm/v/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug)
-[![Build Status](https://img.shields.io/travis/myfreeweb/eslint-plugin-pug.svg?style=flat)](https://travis-ci.org/myfreeweb/eslint-plugin-pug)
+[![Build Status](https://github.com/myfreeweb/eslint-plugin-pug/workflows/Node.js%20CI/badge.svg)](https://github.com/myfreeweb/eslint-plugin-pug/actions)
 [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
 
 # eslint-plugin-pug

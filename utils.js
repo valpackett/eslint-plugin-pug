@@ -114,7 +114,7 @@ exports.transformFix = ({ msg, block, ctx }) => {
   ]
 
   // add indent to multiline fix.text
-  const head = exports.positionToOffset(ctx.vfileLoc, { line: origStart[0], column: origStart[1]+1 })
+  const head = exports.positionToOffset(ctx.vfileLoc, { line: origStart[0], column: origStart[1] + 1 })
   const indent = ctx.src.substring(head - origStart[1], head)
   fix.text = fix.text.replace(/\n/g, '\n' + fix.text.substring(fix.range[0] - origStart[1], fix.range[0]))
   fix.text = exports.addIndentAfterLf(fix.text, indent)

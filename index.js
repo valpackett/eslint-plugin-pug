@@ -1,6 +1,6 @@
 const utils = require('./utils')
 
-var pugProcessor = {
+const pugProcessor = {
   preprocess: utils.preprocess,
   postprocess: utils.postprocess,
   supportsAutofix: true

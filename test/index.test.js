@@ -65,7 +65,7 @@ describe('snapshot unit test', () => {
     expect(messages).toEqual(expected)
     debug.failed = false
   })
-  
+
   test.each([
     ['semi', 'semi-fix', { rules: { semi: ['error', 'always'] } }],
     ['semi2', 'semi2-fix', { rules: { semi: ['error', 'never'] } }],
@@ -85,4 +85,3 @@ describe('snapshot unit test', () => {
     debug.failed = false
   })
 })
-

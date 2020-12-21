@@ -14,7 +14,7 @@ test.each([
   [10, { line: 1, column: 11 }],
   [20, { line: 2, column: 8 }],
 ])('offsetToPosition(%d) = %j', (position, expected) => {
-  const src = "counter = 0;\ncounter = 5"
+  const src = 'counter = 0;\ncounter = 5'
   const result = utils.offsetToPosition(src, position)
   expect(result).toEqual(expected)
 })
