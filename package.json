@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-pug",
   "description": "An ESLint plugin for linting inline scripts in Pug files",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
@@ -25,20 +25,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "pug-lexer": "^4.1.0",
-    "pug-parser": "^5.0.1",
-    "pug-walk": "^1.1.8",
-    "vfile": "^4.0.2",
-    "vfile-location": "^3.0.0"
+    "lodash": "^4.17.20",
+    "pug-lexer": "^5.0.0",
+    "pug-parser": "^6.0.0",
+    "pug-walk": "^2.0.0",
+    "vfile": "^4.2.1",
+    "vfile-location": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
+    "eslint": "^7.16.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "jest": "^25.1.0"
+    "jest": "^26.6.3"
   }
 }

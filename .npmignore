@@ -5,10 +5,10 @@ package-lock.json
 .node_repl_history
 
 # extra ignore file for npm
+.github/
 test/
 .eslintrc.js
 .gitattributes
-.travis.yml
 CODE_OF_CONDUCT.md
 jest.config.js
 repl.js

@@ -1,20 +1,24 @@
 [
   {
-    "ruleId": "max-len",
-    "severity": 2,
-    "message": "This line has a length of 70. Maximum allowed is 35.",
-    "line": 2,
     "column": 3,
+    "endColumn": 73,
+    "endLine": 2,
+    "line": 2,
+    "message": "This line has a length of 70. Maximum allowed is 35.",
+    "messageId": "max",
     "nodeType": "Program",
-    "messageId": "max"
+    "ruleId": "max-len",
+    "severity": 2
   },
   {
-    "ruleId": "max-lines",
-    "severity": 2,
+    "column": 1,
+    "endColumn": 38,
+    "endLine": 7,
+    "line": 3,
     "message": "File has too many lines (6). Maximum allowed is 1.",
-    "line": 2,
-    "column": 3,
+    "messageId": "exceed",
     "nodeType": null,
-    "messageId": "exceed"
+    "ruleId": "max-lines",
+    "severity": 2
   }
 ]
