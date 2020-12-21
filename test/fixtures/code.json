@@ -1,17 +1,18 @@
 [
   {
     "column": 24,
+    "line": 8,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
+    "ruleId": "semi",
+    "severity": 2,
     "fix": {
+      "text": ";",
       "range": [
         165,
         165
-      ],
-      "text": ";"
-    },
-    "line": 8,
-    "message": "Missing semicolon.",
-    "nodeType": "ExpressionStatement",
-    "ruleId": "semi",
-    "severity": 2
+      ]
+    }
   }
 ]

@@ -11,6 +11,15 @@ test.each([
 })
 
 test.each([
+  [10, { line: 1, column: 11 }],
+  [20, { line: 2, column: 8 }],
+])('offsetToPosition(%d) = %j', (position, expected) => {
+  const src = "counter = 0;\ncounter = 5"
+  const result = utils.offsetToPosition(src, position)
+  expect(result).toEqual(expected)
+})
+
+test.each([
   [{ line: 1, column: 1 }, 0],
   [{ line: 3, column: 3 }, 29],
   [{ line: 7, column: 3 }, 60],

@@ -1,81 +1,86 @@
 [
   {
+    "column": 23,
+    "endColumn": 1,
+    "endLine": 6,
+    "line": 5,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
-    "message": "Missing semicolon.",
-    "line": 5,
-    "column": 23,
-    "nodeType": "ExpressionStatement",
-    "endLine": 6,
-    "endColumn": 1,
     "fix": {
+      "text": ";",
       "range": [
         82,
         82
-      ],
-      "text": ";"
+      ]
     }
   },
   {
+    "column": 31,
+    "line": 6,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
-    "message": "Missing semicolon.",
-    "line": 6,
-    "column": 31,
-    "nodeType": "ExpressionStatement",
     "fix": {
+      "text": ";",
       "range": [
         113,
         113
-      ],
-      "text": ";"
+      ]
     }
   },
   {
+    "column": 27,
+    "line": 10,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
-    "message": "Missing semicolon.",
-    "line": 10,
-    "column": 27,
-    "nodeType": "ExpressionStatement",
     "fix": {
+      "text": ";",
       "range": [
         222,
         222
-      ],
-      "text": ";"
+      ]
     }
   },
   {
+    "column": 9,
+    "endColumn": 1,
+    "endLine": 15,
+    "line": 14,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
-    "message": "Missing semicolon.",
-    "line": 14,
-    "column": 9,
-    "nodeType": "ExpressionStatement",
-    "endLine": 15,
-    "endColumn": 1,
     "fix": {
+      "text": ";",
       "range": [
         282,
         282
-      ],
-      "text": ";"
+      ]
     }
   },
   {
+    "column": 9,
+    "line": 18,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
-    "message": "Missing semicolon.",
-    "line": 18,
-    "column": 9,
-    "nodeType": "ExpressionStatement",
     "fix": {
+      "text": ";",
       "range": [
         331,
         331
-      ],
-      "text": ";"
+      ]
     }
   }
 ]

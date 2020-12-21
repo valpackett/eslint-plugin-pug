@@ -1,0 +1,20 @@
+[
+  {
+    "column": 14,
+    "endColumn": 15,
+    "endLine": 2,
+    "line": 2,
+    "message": "Extra semicolon.",
+    "messageId": "extraSemi",
+    "nodeType": "ExpressionStatement",
+    "ruleId": "semi",
+    "severity": 2,
+    "fix": {
+      "text": "0\n  counter",
+      "range": [
+        20,
+        32
+      ]
+    }
+  }
+]

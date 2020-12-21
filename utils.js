@@ -73,6 +73,7 @@ exports.preprocess = (src, filename) => {
   pugWalk(ast, node => {
     if (!exports.isJsNode(node)) return
     const { origs, text } = exports.nodesToOrigsAndText(ctx, node.block.nodes)
+    // console.log('preprocess 1', JSON.stringify({ origs, text, nodes: node.block.nodes }, null, 2))
     ctx.blocks.push({
       column: node.column,
       filename: '0.js',
@@ -84,6 +85,7 @@ exports.preprocess = (src, filename) => {
     })
     return false
   })
+  // console.log('preprocess 2', JSON.stringify(ctx.blocks, null, 2))
   return ctx.blocks
 }
 
@@ -112,15 +114,15 @@ exports.transformFix = ({ msg, block, ctx }) => {
   ]
 
   // add indent to multiline fix.text
-  const head = exports.positionToOffset(ctx.vfileLoc, { line: origStart[0], column: origStart[1] })
-  const indent = ctx.src.substring(head - origStart[1] + 1, head)
+  const head = exports.positionToOffset(ctx.vfileLoc, { line: origStart[0], column: origStart[1]+1 })
+  const indent = ctx.src.substring(head - origStart[1], head)
   fix.text = fix.text.replace(/\n/g, '\n' + fix.text.substring(fix.range[0] - origStart[1], fix.range[0]))
   fix.text = exports.addIndentAfterLf(fix.text, indent)
   return fix
 }
 
 exports.postprocess = (messages, filename) => {
-  // console.log(JSON.stringify(ctx, null, 2))
+  // console.log('postprocess', JSON.stringify({ messages, ctx }, null, 2))
 
   const newMessages = []
   _.each(messages, (blockMsg, blockIdx) => {

@@ -3,35 +3,55 @@
     "column": 3,
     "endColumn": 14,
     "endLine": 2,
+    "line": 2,
+    "message": "Expected space or tab after '//' in comment.",
+    "messageId": "expectedSpaceAfter",
+    "nodeType": "Line",
+    "ruleId": "spaced-comment",
+    "severity": 2,
     "fix": {
+      "text": " ",
       "range": [
         12,
         12
-      ],
-      "text": " "
-    },
-    "line": 2,
-    "message": "Expected space or tab after '//' in comment.",
-    "nodeType": "Line",
-    "ruleId": "spaced-comment",
-    "severity": 2
+      ]
+    }
   },
   {
     "column": 3,
     "endColumn": 19,
     "endLine": 3,
+    "line": 3,
+    "message": "Split initialized 'var' declarations into multiple statements.",
+    "messageId": "splitInitialized",
+    "nodeType": "VariableDeclaration",
+    "ruleId": "one-var",
+    "severity": 2,
     "fix": {
+      "text": "; var",
       "range": [
         35,
         36
-      ],
-      "text": "; var"
-    },
+      ]
+    }
+  },
+  {
+    "column": 3,
+    "endColumn": 19,
+    "endLine": 3,
     "line": 3,
-    "message": "Split initialized 'var' declarations into multiple statements.",
+    "message": "Unexpected var, use let or const instead.",
+    "messageId": "unexpectedVar",
     "nodeType": "VariableDeclaration",
-    "ruleId": "one-var",
-    "severity": 2
+    "ruleId": "no-var",
+    "severity": 1,
+    "fix": {
+      "text": "let",
+      "range": [
+        24,
+        27
+      ]
+    }
   },
   {
     "column": 16,
@@ -39,8 +59,27 @@
     "endLine": 3,
     "line": 3,
     "message": "'baz' is defined but never used.",
+    "messageId": "unusedVar",
     "nodeType": "Identifier",
     "ruleId": "no-unused-vars",
     "severity": 2
+  },
+  {
+    "column": 3,
+    "endColumn": 27,
+    "endLine": 4,
+    "line": 4,
+    "message": "Unexpected var, use let or const instead.",
+    "messageId": "unexpectedVar",
+    "nodeType": "VariableDeclaration",
+    "ruleId": "no-var",
+    "severity": 1,
+    "fix": {
+      "text": "let",
+      "range": [
+        43,
+        46
+      ]
+    }
   }
 ]
