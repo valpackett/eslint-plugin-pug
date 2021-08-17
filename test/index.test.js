@@ -56,13 +56,13 @@ describe('snapshot unit test', () => {
       }
     }],
     ['code', 'code', { rules: { semi: ['error', 'always'] } }],
-  ])('lint %s toEqual snapshot %s.json with baseConfig %j', (filename, snapshot, config) => {
+  ])('lint %s toMatchObject snapshot %s.json with baseConfig %j', (filename, snapshot, config) => {
     debug = { ...debug, filename, snapshot, config }
     expect.hasAssertions()
     const messages = execute(`${filename}.pug`, config)
     debug.messages = messages
     const expected = require(`./fixtures/${snapshot}.json`)
-    expect(messages).toEqual(expected)
+    expect(messages).toMatchObject(expected)
     debug.failed = false
   })
 
