@@ -1,0 +1,26 @@
+[
+  {
+    "column": 30,
+    "fix": {
+      "range": [
+        64,
+        64
+      ],
+      "text": ";"
+    },
+    "line": 4,
+    "message": "Missing semicolon.",
+    "messageId": "missingSemi",
+    "nodeType": "ExpressionStatement",
+    "orig": {
+      "column": 30,
+      "line": 4,
+      "range": [
+        25,
+        25
+      ]
+    },
+    "ruleId": "semi",
+    "severity": 2
+  }
+]

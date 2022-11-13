@@ -87,22 +87,36 @@ exports.nodesToOrigsAndText = (ctx, nodes) => {
 exports.preprocess = (src, filename) => {
   const ast = exports.parsePug(src)
   const ctx = context[filename] = { src, filename, linecol: new LineCol(src), blocks: [] }
-  pugWalk(ast, node => {
-    if (!exports.isJsNode(node)) return
-    const { origs, text } = exports.nodesToOrigsAndText(ctx, node.block.nodes)
-    // console.log('preprocess1 = ', JSON.stringify({ nodes: node.block.nodes, origs, src, text }))
-    ctx.blocks.push({
-      column: node.column,
-      filename: '0.js',
-      fixMultiline: node.line !== _.first(origs)[0],
-      line: node.line,
-      origs,
-      text,
-      linecol: new LineCol(text),
-    })
+  pugWalk(ast, jsnode => {
+    if (!exports.isJsNode(jsnode)) return
+    // console.log(`jsnode = ${JSON.stringify(jsnode)}`)
+    const ctxBlocksPush = nodes => {
+      if (!nodes.length) return
+      const { origs, text } = exports.nodesToOrigsAndText(ctx, nodes)
+      // console.log(`ctxBlocksPush = ${JSON.stringify({ nodes, origs, src, text })}`)
+      ctx.blocks.push({
+        column: jsnode.column,
+        filename: '0.js',
+        fixMultiline: jsnode.line !== _.first(origs)[0],
+        line: jsnode.line,
+        origs,
+        text,
+        linecol: new LineCol(text),
+      })
+    }
+    let textNodes = []
+    for (const node of jsnode.block.nodes) {
+      if (!_.includes(['Text', 'Code'], node.type)) {
+        ctxBlocksPush(textNodes)
+        textNodes = []
+        continue
+      }
+      textNodes.push(node)
+    }
+    ctxBlocksPush(textNodes)
     return false
   })
-  // console.log('preprocess2 = ', JSON.stringify(ctx.blocks))
+  // console.log(`preprocess = ${JSON.stringify(ctx.blocks)}`)
   return ctx.blocks
 }
 
@@ -142,7 +156,7 @@ exports.transformFix = ({ msg, block, ctx }) => {
 }
 
 exports.postprocess = (messages, filename) => {
-  // console.log('postprocess', JSON.stringify({ messages, ctx }, null, 2))
+  // console.log(`postprocess = ${JSON.stringify({ messages, ctx })}`)
   const newMessages = []
   const ctx = context[filename]
   _.each(messages, (blockMsg, blockIdx) => {

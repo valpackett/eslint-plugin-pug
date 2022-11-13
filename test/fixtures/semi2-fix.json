@@ -1,8 +1,4 @@
 {
-  "errorCount": 0,
-  "fixableErrorCount": 0,
-  "fixableWarningCount": 0,
   "output": "script.\n  counter = 0\n  counter = 5",
-  "warningCount": 0,
   "messages": []
 }

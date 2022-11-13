@@ -1,8 +1,4 @@
 {
   "messages": [],
-  "errorCount": 0,
-  "warningCount": 0,
-  "fixableErrorCount": 0,
-  "fixableWarningCount": 0,
   "output": "doctype html\nhtml\n  body\n    script(type='text/javascript')\n      | alert('piped');\n      |alert('piped-no-space');\n    script(type='lang/python') print 'hello'\n    p\n      | This should be ignored\n    script alert('inline');\n    script.\n      console.log({\n        dot: 'ted'\n      });\n\n      console.log({\n        dot: 'ted'\n      });\n    script\n    script(src=\"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js\", integrity=\"sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=\", crossorigin=\"anonymous\", async)\n"
 }
