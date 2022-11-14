@@ -1,11 +1,11 @@
 [![npm version](https://img.shields.io/npm/v/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-plugin-pug.svg?style=flat)](https://www.npmjs.org/package/eslint-plugin-pug)
-[![Build Status](https://github.com/myfreeweb/eslint-plugin-pug/workflows/Node.js%20CI/badge.svg)](https://github.com/myfreeweb/eslint-plugin-pug/actions)
-[![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
+[![Build Status](https://github.com/valpackett/eslint-plugin-pug/workflows/Node.js%20CI/badge.svg)](https://github.com/valpackett/eslint-plugin-pug/actions)
+[![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](https://unlicense.org)
 
 # eslint-plugin-pug
 
-An [ESLint] plugin for linting inline scripts in [Pug] files (formerly Jade)!
+An [ESLint] plugin for linting inline scripts in [Pug] files!
 
 Only extracts `script` tags with no type or `text/javascript` type.
 
@@ -40,11 +40,9 @@ And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `pack
 
 Please feel free to submit pull requests!
 
-By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/) and to release your contributions under the Unlicense.
-
-[The list of contributors is available on GitHub](https://github.com/myfreeweb/eslint-plugin-pug/graphs/contributors).
+By participating in this project you agree to follow the [Contributor Code of Conduct](https://contributor-covenant.org/version/1/4/) and to release your contributions under the Unlicense.
 
 ## License
 
 This is free and unencumbered software released into the public domain.  
-For more information, please refer to the `UNLICENSE` file or [unlicense.org](http://unlicense.org).
+For more information, please refer to the `UNLICENSE` file or [unlicense.org](https://unlicense.org).
