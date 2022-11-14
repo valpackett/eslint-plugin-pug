@@ -2,14 +2,14 @@
   "name": "eslint-plugin-pug",
   "description": "An ESLint plugin for linting inline scripts in Pug files",
   "version": "1.2.5",
-  "author": "Greg V <greg@unrelenting.technology>",
+  "author": "Val Packett <val@packett.cool>, taichunmin <taichunmin@gmail.com>",
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myfreeweb/eslint-plugin-pug"
+    "url": "https://github.com/valpackett/eslint-plugin-pug"
   },
   "bugs": {
-    "url": "https://github.com/myfreeweb/eslint-plugin-pug/issues"
+    "url": "https://github.com/valpackett/eslint-plugin-pug/issues"
   },
   "keywords": [
     "eslint",
