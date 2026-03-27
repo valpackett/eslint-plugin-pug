@@ -4,7 +4,6 @@
     "line": 8,
     "message": "Missing semicolon.",
     "messageId": "missingSemi",
-    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
     "fix": {

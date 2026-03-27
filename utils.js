@@ -44,14 +44,13 @@ class LineCol {
 
 exports.LineCol = LineCol
 
-exports.isJsNode = node => {
-  if (node.type !== 'Tag' || node.name !== 'script') return false // not a script tag
-  if (!node.block.nodes.length) return false // nodes empty
-  let scriptType = 'text/javascript'
-  _.each(node.attrs, attr => {
-    if (attr.name === 'type' && _.isString(attr.val)) scriptType = _.trim(attr.val, '\'" ')
-  })
-  return _.includes(JS_MIME, _.toLower(scriptType))
+exports.getTagType = node => {
+  if (node.type !== 'Tag') return null
+  for (let i = node.attrs.length - 1; i >= 0; i--) {
+    const attr = node.attrs[i]
+    if (attr.name === 'type' && _.isString(attr.val)) return _.toLower(_.trim(attr.val, '\'" '))
+  }
+  return null
 }
 
 exports.originalPoint = (column, orig, indentEnd = true) => {
@@ -87,16 +86,23 @@ exports.nodesToOrigsAndText = (ctx, nodes) => {
 exports.preprocess = (src, filename) => {
   const ast = exports.parsePug(src)
   const ctx = context[filename] = { src, filename, linecol: new LineCol(src), blocks: [] }
+  let nodeCnt = 0
   pugWalk(ast, jsnode => {
-    if (!exports.isJsNode(jsnode)) return
+    if (jsnode.type !== 'Tag' || jsnode.name !== 'script') return // not a script tag
+    if (!jsnode.block.nodes.length) return // nodes empty
+    const tagType = exports.getTagType(jsnode)
+    const isJsNode = _.includes(JS_MIME, tagType ?? 'text/javascript')
+    const isMjsNode = tagType === 'module'
+    if (!isJsNode && !isMjsNode) return // not js
     // console.log(`jsnode = ${JSON.stringify(jsnode)}`)
+
     const ctxBlocksPush = nodes => {
       if (!nodes.length) return
       const { origs, text } = exports.nodesToOrigsAndText(ctx, nodes)
       // console.log(`ctxBlocksPush = ${JSON.stringify({ nodes, origs, src, text })}`)
       ctx.blocks.push({
         column: jsnode.column,
-        filename: '0.js',
+        filename: `${nodeCnt++}${isMjsNode ? '.mjs' : '.js'}`,
         fixMultiline: jsnode.line !== _.first(origs)[0],
         line: jsnode.line,
         origs,

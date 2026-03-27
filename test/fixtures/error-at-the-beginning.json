@@ -6,7 +6,6 @@
     "line": 2,
     "message": "This line has a length of 70. Maximum allowed is 35.",
     "messageId": "max",
-    "nodeType": "Program",
     "ruleId": "max-len",
     "severity": 2
   },
@@ -17,7 +16,6 @@
     "line": 3,
     "message": "File has too many lines (6). Maximum allowed is 1.",
     "messageId": "exceed",
-    "nodeType": null,
     "ruleId": "max-lines",
     "severity": 2
   }

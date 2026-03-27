@@ -1,5 +1,3 @@
 {
-  "fixed": false,
-  "output": "script.\n  if (true)\n    console.log('yes')\nscript.\n  if (true)\n  {\n    console.log('curly')\n  }",
   "messages": []
 }

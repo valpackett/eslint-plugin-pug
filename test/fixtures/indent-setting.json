@@ -13,7 +13,6 @@
     "line": 14,
     "message": "Expected indentation of 0 spaces but found 2.",
     "messageId": "wrongIndentation",
-    "nodeType": "Keyword",
     "ruleId": "indent",
     "severity": 2
   },
@@ -31,7 +30,6 @@
     "line": 15,
     "message": "Expected indentation of 2 spaces but found 4.",
     "messageId": "wrongIndentation",
-    "nodeType": "Identifier",
     "ruleId": "indent",
     "severity": 2
   },
@@ -49,7 +47,6 @@
     "line": 16,
     "message": "Expected indentation of 0 spaces but found 2.",
     "messageId": "wrongIndentation",
-    "nodeType": "Punctuator",
     "ruleId": "indent",
     "severity": 2
   },
@@ -67,7 +64,6 @@
     "line": 19,
     "message": "Expected indentation of 0 spaces but found 4.",
     "messageId": "wrongIndentation",
-    "nodeType": "Keyword",
     "ruleId": "indent",
     "severity": 2
   },
@@ -85,7 +81,6 @@
     "line": 20,
     "message": "Expected indentation of 2 spaces but found 6.",
     "messageId": "wrongIndentation",
-    "nodeType": "Identifier",
     "ruleId": "indent",
     "severity": 2
   },
@@ -103,7 +98,6 @@
     "line": 21,
     "message": "Expected indentation of 0 spaces but found 4.",
     "messageId": "wrongIndentation",
-    "nodeType": "Punctuator",
     "ruleId": "indent",
     "severity": 2
   }
