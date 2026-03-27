@@ -6,7 +6,6 @@
     "line": 2,
     "message": "Extra semicolon.",
     "messageId": "extraSemi",
-    "nodeType": "ExpressionStatement",
     "ruleId": "semi",
     "severity": 2,
     "fix": {

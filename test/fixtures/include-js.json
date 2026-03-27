@@ -11,7 +11,6 @@
     "line": 4,
     "message": "Missing semicolon.",
     "messageId": "missingSemi",
-    "nodeType": "ExpressionStatement",
     "orig": {
       "column": 30,
       "line": 4,
