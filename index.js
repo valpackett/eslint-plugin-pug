@@ -1,14 +1,24 @@
 const utils = require('./utils')
+const pkg = require('./package.json')
 
-const pugProcessor = {
+const processor = {
+  meta: {
+    name: `eslint-processor-pug`,
+    version: pkg.version,
+  },
   preprocess: utils.preprocess,
   postprocess: utils.postprocess,
-  supportsAutofix: true
+  supportsAutofix: true,
 }
 
 module.exports = {
+  meta: {
+    name: pkg.name,
+    version: pkg.version,
+  },
   processors: {
-    '.jade': pugProcessor,
-    '.pug': pugProcessor
+    '.jade': processor,
+    '.pug': processor,
+    'pug': processor,
   }
 }

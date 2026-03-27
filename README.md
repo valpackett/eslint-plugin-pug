@@ -23,6 +23,29 @@ Install with [npm], obviously:
 npm install --save-dev eslint eslint-plugin-pug
 ```
 
+### eslint v9 and above
+
+And add to your [ESLint configuration] -- `eslint.config.js`:
+
+```js
+// eslint.config.js
+import { defineConfig } from 'eslint/config';
+import pluginPug from 'eslint-plugin-pug';
+
+export default defineConfig([
+  {
+    files: ['**/*.pug', '**/*.jade'], // apply processor to .jade, .pug files
+    plugins: {
+      pug: pluginPug,
+    },
+    processor: 'pug/pug',
+  },
+  // ... other configs
+]);
+```
+
+### eslint v8 and below
+
 And add to your [ESLint configuration] -- `.eslintrc` or `eslintConfig` in `package.json`:
 
 ```json

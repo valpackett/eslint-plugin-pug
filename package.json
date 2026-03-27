@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-pug",
   "description": "An ESLint plugin for linting inline scripts in Pug files",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "author": "Val Packett <val@packett.cool>, taichunmin <taichunmin@gmail.com>",
   "license": "Unlicense",
   "repository": {
@@ -22,23 +22,24 @@
   "main": "index.js",
   "scripts": {
     "repl": "node --experimental-repl-await repl.js",
-    "lint": "eslint --ext .js --fix .",
-    "test": "jest"
+    "lint": "eslint",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "pug-lexer": "^5.0.1",
     "pug-parser": "^6.0.0",
     "pug-walk": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^17.9.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.2.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.1.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-pug": "file:.",
-    "jest": "^29.7.0"
+    "globals": "^17.4.0",
+    "jest": "^30.3.0",
+    "neostandard": "^0.13.0"
   }
 }
