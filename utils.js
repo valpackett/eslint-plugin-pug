@@ -102,7 +102,7 @@ exports.preprocess = (src, filename) => {
       // console.log(`ctxBlocksPush = ${JSON.stringify({ nodes, origs, src, text })}`)
       ctx.blocks.push({
         column: jsnode.column,
-        filename: `${nodeCnt++}${isMjsNode ? '.mjs' : '.js'}`,
+        filename: `${nodeCnt++}.pug${isMjsNode ? '.mjs' : '.js'}`,
         fixMultiline: jsnode.line !== _.first(origs)[0],
         line: jsnode.line,
         origs,

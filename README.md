@@ -30,17 +30,24 @@ And add to your [ESLint configuration] -- `eslint.config.js`:
 ```js
 // eslint.config.js
 import { defineConfig } from 'eslint/config';
-import pluginPug from 'eslint-plugin-pug';
+import pug from 'eslint-plugin-pug';
 
 export default defineConfig([
+  // ... other configs
   {
-    files: ['**/*.pug', '**/*.jade'], // apply processor to .jade, .pug files
-    plugins: {
-      pug: pluginPug,
-    },
+    name: 'eslint-plugin-pug/processor',
+    files: ['**/*.pug', '**/*.jade'], // apply processor to .pug, .jade files
+    plugins: { pug },
     processor: 'pug/pug',
   },
-  // ... other configs
+  {
+    name: 'eslint-plugin-pug/rules',
+    files: ['**/*.pug.mjs', '**/*.pug.js'], // apply rules to virtual .pug.mjs, .pug.js files created by the processor
+    rules: {
+      '@stylistic/eol-last': ['error', 'never'],
+      // ... other rules
+    },
+  },
 ]);
 ```
 
